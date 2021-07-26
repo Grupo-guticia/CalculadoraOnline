@@ -8,16 +8,16 @@
     const producto = document.getElementById("producto");
     const delivery = document.getElementsByTagName("radioDelivery");
 
-    const flete = document.getElementById("")
-    const tramite_aduanal = document.getElementById("")
-    const impuestos = document.getElementById("")
-    const cepa = document.getElementById("")
-    const total_cargos_importacion = document.getElementById("")
-    const comisión_por_compra = document.getElementById("")
-    const total = document.getElementById("")
+    const flete = document.getElementById("flete")
+    const tramite_aduanal = document.getElementById("tramite_aduanal")
+    const impuestos = document.getElementById("impuestos")
+    const cepa = document.getElementById("cepa")
+    const total_cargos_importacion = document.getElementById("total_cargos_importacion")
+    const comision_por_compra = document.getElementById("comision_por_compra")
+    const total = document.getElementById("total")
 
-    const calcular = document.getElementById("");
-    const limpiar = document.getElementById("");
+    const calcular = document.getElementById("calcular");
+    const limpiar = document.getElementById("limpiar");
     //
 	// Methods
 	//
