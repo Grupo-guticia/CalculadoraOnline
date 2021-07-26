@@ -25,7 +25,7 @@
 						<ul class="list-group mb-3">
 							<li class="list-group-item d-flex justify-content-between lh-sm">
 								<div>
-									<h6 class="my-0">Flete</h6>
+									<h6 id="flete" class="my-0">Flete</h6>
 								</div>
 								<span class="text-muted" id="flete">$12</span>
 							</li>
@@ -37,33 +37,33 @@
 							</li>
 							<li class="list-group-item d-flex justify-content-between lh-sm">
 								<div>
-									<h6 class="my-0">Impuestos</h6>
+									<h6 id="impuestos" class="my-0">Impuestos</h6>
 								</div>
 								<span class="text-muted" id="impuestos">$5</span>
 							</li>
 							<li class="list-group-item d-flex justify-content-between lh-sm">
 								<div>
-									<h6 class="my-0">CEPA</h6>
+									<h6 id="cepa" class="my-0">CEPA</h6>
 								</div>
 								<span class="text-muted" id="cepa">$5</span>
 							</li>
 							
 							<li class="list-group-item d-flex justify-content-between">
 								<div>
-									<h6 class="my-0 text-primary">Total cargos por importación</h6>
+									<h6 id="total_cargos_importacion" class="my-0 text-primary">Total cargos por importación</h6>
 								</div>
 								<strong class="text-primary" id="total_usd">$30</strong>
 							</li>
 							<li class="list-group-item d-flex justify-content-between">
 								<div>
-									<h6 class="my-0 text-primary">Comisión por compra</h6>
+									<h6 id="comision_por_compra" class="my-0 text-primary">Comisión por compra</h6>
 								</div>
 								<strong class="text-primary" id="total_usd">$30</strong>
 							</li>
 
 							<li class="list-group-item d-flex justify-content-between lh-sm">
 								<div>
-									<h4 class="my-0">Total (incluyendo valor del producto)</h4>
+									<h4 id="total" class="my-0">Total (incluyendo valor del producto)</h4>
 								</div>
 								<strong id="cepa">$43</strong>
 							</li>
@@ -85,7 +85,7 @@
 
 								<div class="mb-1">
 									<label for="impuesto_producto" class="form-label">Producto</label>
-									<select class="form-select" id="impuesto_producto" required>
+									<select class="form-select" id="producto" required>
 										<option>Elija un producto</option>
 										<option value="0.28">Accerorios para camara</option>
 										<option value="0.28">Accesorios de fiesta</option>
@@ -199,10 +199,10 @@
 
 							<div class="row g-3">
 								<div class="col-sm-6">
-									<button class="w-100 btn btn-success btn-lg" type="submit">Calcular</button>
+									<button id="calcular" class="w-100 btn btn-success btn-lg" type="submit">Calcular</button>
 								</div>
 								<div class="col-sm-6">
-									<button class="w-100 btn btn-primary btn-lg" type="submit">Limpiar</button>
+									<button id="limpiar" class="w-100 btn btn-primary btn-lg" type="submit">Limpiar</button>
 								</div>
 							</div>
 						</form>
