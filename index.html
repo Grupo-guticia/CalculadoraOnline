@@ -25,52 +25,52 @@
 						<ul class="list-group mb-3">
 							<li class="list-group-item d-flex justify-content-between lh-sm">
 								<div>
-									<h6 id="flete" class="my-0">Flete</h6>
+									<h6 class="my-0">Flete</h6>
 								</div>
-								<span class="text-muted" id="flete">$12</span>
+								<span class="text-muted" id="flete">$0</span>
 							</li>
 							<li class="list-group-item d-flex justify-content-between lh-sm">
 								<div>
 									<h6 class="my-0">Trámite aduanal</h6>
 								</div>
-								<span class="text-muted" id="tramite_aduanal">$8</span>
+								<span class="text-muted" id="tramite_aduanal">$0</span>
 							</li>
 							<li class="list-group-item d-flex justify-content-between lh-sm">
 								<div>
-									<h6 id="impuestos" class="my-0">Impuestos</h6>
+									<h6 class="my-0">Impuestos</h6>
 								</div>
-								<span class="text-muted" id="impuestos">$5</span>
+								<span class="text-muted" id="impuestos">$0</span>
 							</li>
 							<li class="list-group-item d-flex justify-content-between lh-sm">
 								<div>
-									<h6 id="cepa" class="my-0">CEPA</h6>
+									<h6 class="my-0">CEPA</h6>
 								</div>
-								<span class="text-muted" id="cepa">$5</span>
+								<span class="text-muted" id="cepa">$0</span>
 							</li>
 							
 							<li class="list-group-item d-flex justify-content-between">
 								<div>
-									<h6 id="total_cargos_importacion" class="my-0 text-primary">Total cargos por importación</h6>
+									<h6 class="my-0 text-primary">Total cargos por importación</h6>
 								</div>
-								<strong class="text-primary" id="total_usd">$30</strong>
+								<strong class="text-primary" id="total_cargos_importacion">$0</strong>
 							</li>
 							<li class="list-group-item d-flex justify-content-between">
 								<div>
-									<h6 id="comision_por_compra" class="my-0 text-primary">Comisión por compra</h6>
+									<h6 class="my-0 text-primary">Comisión por compra</h6>
 								</div>
-								<strong class="text-primary" id="total_usd">$30</strong>
+								<strong class="text-primary" id="comision_por_compra">$0</strong>
 							</li>
 
 							<li class="list-group-item d-flex justify-content-between lh-sm">
 								<div>
-									<h4 id="total" class="my-0">Total (incluyendo valor del producto)</h4>
+									<h4  class="my-0">Total (incluyendo valor del producto)</h4>
 								</div>
-								<strong id="cepa">$43</strong>
+								<strong id="total">$0</strong>
 							</li>
 					</ul>
 					</div>
 					<div class="col-md-6 col-lg-6">
-						<form class="needs-validation" novalidate="">
+						<!-- <form class="needs-validation" novalidate=""> -->
 							<div class="row g-3">
 								<div class="mb-1">
 									<label for="peso_libras" class="form-label">Peso de mercadería en libras</label>
@@ -79,7 +79,7 @@
 								</div>
 				
 								<div class="mb-1">
-									<label for="valor_compra" class="form-label">Valor de tu compra</label>
+									<label for="flete_compra" class="form-label">Valor de tu compra</label>
 									<input type="text" class="form-control" id="valor_compra" placeholder="Cantidad en dólares" value="" required="">
 								</div>
 
@@ -202,10 +202,10 @@
 									<button id="calcular" class="w-100 btn btn-success btn-lg" type="submit">Calcular</button>
 								</div>
 								<div class="col-sm-6">
-									<button id="limpiar" class="w-100 btn btn-primary btn-lg" type="submit">Limpiar</button>
+									<button id="limpiar" class="w-100 btn btn-primary btn-lg">Limpiar</button>
 								</div>
 							</div>
-						</form>
+						<!-- </form> -->
 					</div>
 				</div>
 				<hr class="my-4">
@@ -224,6 +224,6 @@
 			</div>
 		</main>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-		<script src="/js/index.js"></script>
+		<script type="module" src="/js/index.js"></script>
 	</body>
 </html>
