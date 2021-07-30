@@ -11,9 +11,11 @@ import Calculator from "./calculator.js";
 	const delivery = document.getElementsByName("radioDelivery");
 
 	const flete = document.getElementById("flete")
-	const tramite_aduanal = document.getElementById("tramite_aduanal")
-	const impuestos = document.getElementById("impuestos")
-	const cepa = document.getElementById("cepa")
+    const impuestos = document.getElementById("impuestos")
+    const manejo = document.getElementById("manejo")
+	// const tramite_aduanal = document.getElementById("tramite_aduanal")
+	
+	// const cepa = document.getElementById("cepa")
 	const total_cargos_importacion = document.getElementById("total_cargos_importacion")
 	const comision_por_compra = document.getElementById("comision_por_compra")
 	const total = document.getElementById("total")

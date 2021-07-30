@@ -5,11 +5,12 @@ class Calculator {
 		this.producto = config.producto,
 		this.delivery = config.delivery,
 		this.flete = flete,
-		this.tramite_aduanal = tramite_aduanal,
+		// this.tramite_aduanal = tramite_aduanal,
+		// this.cepa = cepa,
 		this.impuestos = impuestos,
-		this.cepa = cepa,
+		this.manejo = manejo,
 		this.total_cargos_importacion = total_cargos_importacion,
-		this.comision_por_compra = comision_por_compra,
+		// this.comision_por_compra = comision_por_compra,
 		this.total = total
 	}
 	
@@ -29,11 +30,11 @@ class Calculator {
 		this.valor_compra.value = "";
 
 		this.flete.innerHTML = "$0",
-		this.tramite_aduanal.innerHTML = "$0",
+		// this.tramite_aduanal.innerHTML = "$0",
 		this.impuestos.innerHTML = "$0",
-		this.cepa.innerHTML = "$0",
+		// this.cepa.innerHTML = "$0",
 		this.total_cargos_importacion.innerHTML = "$0",
-		this.comision_por_compra.innerHTML = "$0",
+		// this.comision_por_compra.innerHTML = "$0",
 		this.total.innerHTML = "$0"
 
 		this.producto.selectedIndex = 0;
