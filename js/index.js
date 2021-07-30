@@ -27,6 +27,7 @@ import Calculator from "./calculator.js";
 
 
 	limpiar.onclick = () => calculator.clean();
+	calcular.onclick = () => calculator.calculate();
 
 
 	//
@@ -45,7 +46,7 @@ import Calculator from "./calculator.js";
 		total_cargos_importacion:total_cargos_importacion,
 		comision_por_compra:comision_por_compra,
 		total:total
-		
+
 	});
 
 })();
