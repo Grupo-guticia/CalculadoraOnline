@@ -84,20 +84,14 @@ class Calculator {
         }
         else if (parseFloat(this.peso.value) >= 100 && parseFloat(this.peso.value) <= 499 ){
             flete = 2.50;
-            manejo = 69;
-
-        }
-        else if (parseFloat(this.peso.value) >= 500 && parseFloat(this.peso.value) <= 1000 ){
-            flete = 2.50;
             manejo = 92;
 
         }
         else if (parseFloat(this.peso.value) >= 500 && parseFloat(this.peso.value) <= 1000 ){
             flete = 2.50;
             manejo = 138;
-
         }
-
+        
         return {manejo,flete};
     }
 
