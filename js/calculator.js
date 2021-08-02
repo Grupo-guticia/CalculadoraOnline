@@ -13,7 +13,16 @@ class Calculator {
 		// this.comision_por_compra = comision_por_compra,
 		this.total = total
 	}
-	
+    
+    get_delivery(){
+        let result = "";
+		this.delivery.forEach(function(option){ 
+			if(option.checked == true){
+                result  = parseFloat(option.value)
+			}
+		});
+        return result;
+	}
 
 	clean_radios(){
 		this.delivery.forEach(function(option){ 
@@ -94,7 +103,19 @@ class Calculator {
 
 	calculate(){
         let flete_manejo = this.get_flete_and_manejo();
-        console.log(flete_manejo);
+
+        let delivery = this.get_delivery();
+
+        let impuesto = parseFloat(this.producto.value) * parseFloat(this.valor_compra.value);
+        let cargos_por_importacion = flete_manejo.flete + impuesto + flete_manejo.manejo;
+        let total = impuesto + cargos_por_importacion + parseFloat(delivery) + parseFloat(this.valor_compra.value) ;
+
+        this.flete.innerHTML = `$${flete_manejo.flete.toFixed(2)}`;
+        this.impuestos.innerHTML = `$${impuesto.toFixed(2)}`;
+        this.manejo.innerHTML = `$${flete_manejo.manejo.toFixed(2)}`;
+        this.total_cargos_importacion.innerHTML = `$${cargos_por_importacion.toFixed(2)}`;
+        this.total.innerHTML = `$${total.toFixed(2)}`;
+
     }
         
   }

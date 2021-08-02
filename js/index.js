@@ -42,9 +42,9 @@ import Calculator from "./calculator.js";
 		producto: producto,
 		delivery: delivery,
 		flete: flete,
-		tramite_aduanal: tramite_aduanal,
+		// tramite_aduanal: tramite_aduanal,
 		impuestos: impuestos,
-		cepa:cepa,
+		// cepa:cepa,
 		total_cargos_importacion:total_cargos_importacion,
 		comision_por_compra:comision_por_compra,
 		total:total
