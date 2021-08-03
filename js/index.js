@@ -35,7 +35,7 @@ import Calculator from "./calculator.js";
 	//
 	// Inits & Event Listeners
 	//
-
+    
 	const calculator = new Calculator({
 		peso: peso,
 		valor_compra: valor_compra,
