@@ -28,8 +28,25 @@ import Calculator from "./calculator.js";
 	//
 
 
-	limpiar.onclick = () => calculator.clean();
-	calcular.onclick = () => calculator.calculate();
+	limpiar.onclick = () => {
+        Toastify({
+            text: "¡Se han limpiado los resultados!",
+            duration: 3000,
+            destination: "https://github.com/apvarun/toastify-js",
+            newWindow: true,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "center", // `left`, `center` or `right`
+            backgroundColor: "linear-gradient(to right, #C70039, #C70039)",
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            onClick: function(){} // Callback after click
+            }).showToast();
+        calculator.clean();
+    };
+	calcular.onclick = () => {
+        calculator.calculate();
+    };
+    
 
 
 	//

@@ -95,21 +95,63 @@ class Calculator {
 		return {manejo,flete};
 	}
 
+	validate_form(){
+		if (true){
+			console.log('validado');
+			return true;
+		}else{
+			Toastify({
+				text: "¡Ingrese los datos correctamente!",
+				duration: 3000,
+				destination: "https://github.com/apvarun/toastify-js",
+				newWindow: true,
+				close: true,
+				gravity: "top", // `top` or `bottom`
+				position: "center", // `left`, `center` or `right`
+				backgroundColor: "linear-gradient(to right, red ,red )",
+				stopOnFocus: true, // Prevents dismissing of toast on hover
+				onClick: function(){} // Callback after click
+				}).showToast();
+			return false;
+		}
+		
+		
+	}
+
 	calculate(){
 		// Desestructurar objeto
-		let {flete,manejo} = this.get_flete_and_manejo();
 
-		let delivery = this.get_delivery();
+		if (this.validate_form()){
+			let {flete,manejo} = this.get_flete_and_manejo();
+			let delivery = this.get_delivery();
 
-		let impuesto = parseFloat(this.producto.value) * parseFloat(this.valor_compra.value);
-		let cargos_por_importacion = flete + impuesto + manejo;
-		let total = impuesto + cargos_por_importacion + parseFloat(delivery) + parseFloat(this.valor_compra.value) ;
+			let impuesto = parseFloat(this.producto.value) * parseFloat(this.valor_compra.value);
+			let cargos_por_importacion = flete + impuesto + manejo;
+			let total = impuesto + cargos_por_importacion + parseFloat(delivery) + parseFloat(this.valor_compra.value) ;
 
-		this.flete.innerHTML = `$${flete.toFixed(2)}`;
-		this.impuestos.innerHTML = `$${impuesto.toFixed(2)}`;
-		this.manejo.innerHTML = `$${manejo.toFixed(2)}`;
-		this.total_cargos_importacion.innerHTML = `$${cargos_por_importacion.toFixed(2)}`;
-		this.total.innerHTML = `$${total.toFixed(2)}`;
+			this.flete.innerHTML = `$${flete.toFixed(2)}`;
+			this.impuestos.innerHTML = `$${impuesto.toFixed(2)}`;
+			this.manejo.innerHTML = `$${manejo.toFixed(2)}`;
+			this.total_cargos_importacion.innerHTML = `$${cargos_por_importacion.toFixed(2)}`;
+			this.total.innerHTML = `$${total.toFixed(2)}`;
+			Toastify({
+				text: "¡Cálculo hecho correctamente!",
+				duration: 3000,
+				destination: "https://github.com/apvarun/toastify-js",
+				newWindow: true,
+				close: true,
+				gravity: "top", // `top` or `bottom`
+				position: "center", // `left`, `center` or `right`
+				backgroundColor: "linear-gradient(to right, #198754 ,#198754 )",
+				stopOnFocus: true, // Prevents dismissing of toast on hover
+				onClick: function(){} // Callback after click
+				}).showToast();
+		}else{
+			console.log('error en formulario');
+
+		}
+
+		
 
 	}
 		
