@@ -12,10 +12,10 @@ import Calculator from "./calculator.js";
 
 	const flete = document.getElementById("flete")
     const impuestos = document.getElementById("impuestos")
-    const manejo = document.getElementById("manejo")
-	// const tramite_aduanal = document.getElementById("tramite_aduanal")
+    // const manejo = document.getElementById("manejo")
+	const tramite_aduanal = document.getElementById("tramite_aduanal")
 	
-	// const cepa = document.getElementById("cepa")
+	const cepa = document.getElementById("cepa")
 	const total_cargos_importacion = document.getElementById("total_cargos_importacion")
 	const comision_por_compra = document.getElementById("comision_por_compra")
 	const total = document.getElementById("total")
@@ -46,12 +46,12 @@ import Calculator from "./calculator.js";
 		valor_compra: valor_compra,
 		producto: producto,
 		delivery: delivery,
-		flete: flete,
-		// tramite_aduanal: tramite_aduanal,
+		// flete: flete,
+		tramite_aduanal: tramite_aduanal,
 		impuestos: impuestos,
-		// cepa:cepa,
+		cepa:cepa,
 		total_cargos_importacion:total_cargos_importacion,
-		comision_por_compra:comision_por_compra,
+		// comision_por_compra:comision_por_compra,
 		total:total
 
 	});
