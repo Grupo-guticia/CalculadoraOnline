@@ -2,6 +2,7 @@ class Calculator {
 	constructor(config) {
 
 		this.peso = config.peso;
+		this.flete = config.flete;
 		this.valor_compra = config.valor_compra,
 		this.producto = config.producto,
 		this.tramite_aduanal = tramite_aduanal,
@@ -12,7 +13,7 @@ class Calculator {
 	}
 
     get_tramite_aduanal(){
-		let tramite_aduanal = "";
+		let tramite_aduanal = 0;
 		if (parseFloat(this.peso.value) >= 0.1 && parseFloat(this.peso.value) <= 99 ){
 			tramite_aduanal = 5
 		}
@@ -83,25 +84,23 @@ class Calculator {
 
 		if (this.validate_form()){
             
-			const manejo = 3;
             const cepa = 5.16;
-            
             const dai = 15;
+            const impuesto_sobre_venta = 0.13
             
-
-			let tramite_aduanal = this.get_tramite_aduanal();
-			let flete = this.get_flete();
-
-            let impuesto 
-			let impuesto = parseFloat(this.producto.value) * parseFloat(this.valor_compra.value);
-
-			let cargos_por_importacion = + impuesto + manejo;
+            let flete = parseFloat(this.peso.value) * parseFloat(this.valor_compra.value);
+            let cif = parseFloat(this.valor_compra.value) + flete;
+            let iva = (cif + dai) * impuesto_sobre_venta;
+			let impuesto = iva+dai;
+			let cargos_por_importacion = impuesto ;
             let total = impuesto + cargos_por_importacion  + parseFloat(this.valor_compra.value) ;			
-			this.impuestos.innerHTML = `$${impuesto.toFixed(2)}`;
+			
+            this.impuestos.innerHTML = `$${impuesto.toFixed(2)}`;
 			this.cepa.innerHTML = `$${cepa.toFixed(2)}`;
 			this.tramite_aduanal.innerHTML = `$${tramite_aduanal.toFixed(2)}`;
 			this.total_cargos_importacion.innerHTML = `$${cargos_por_importacion.toFixed(2)}`;
 			this.total.innerHTML = `$${total.toFixed(2)}`;
+			this.flete.innerHTML = `$${flete.toFixed(2)}`;
 
             Toastify({
                 text: "¡Cálculo realizado!",
