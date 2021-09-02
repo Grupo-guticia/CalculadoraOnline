@@ -93,8 +93,8 @@ class Calculator {
             let cif = parseFloat(this.valor_compra.value) + flete;
             let iva = (cif + dai) * impuesto_sobre_venta;
 			let impuesto = iva+dai;
-			let cargos_por_importacion = flete + tramite_aduanal + impuesto +cepa ;
-            let total = flete + tramite_aduanal + impuesto  + parseFloat(this.valor_compra.value) ;			
+			let cargos_por_importacion = flete + tramite_aduanal + impuesto + cepa ;
+            let total = cargos_por_importacion  + parseFloat(this.valor_compra.value) ;			
 			
             this.impuestos.innerHTML = `$${impuesto.toFixed(2)}`;
 			this.cepa.innerHTML = `$${cepa.toFixed(2)}`;
