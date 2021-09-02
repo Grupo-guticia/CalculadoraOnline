@@ -10,9 +10,8 @@ import Calculator from "./calculator.js";
 	const producto = document.getElementById("producto");
 	const delivery = document.getElementsByName("radioDelivery");
 
-	const flete = document.getElementById("flete")
+	const flete = document.getElementById("flete");
     const impuestos = document.getElementById("impuestos")
-    // const manejo = document.getElementById("manejo")
 	const tramite_aduanal = document.getElementById("tramite_aduanal")
 	
 	const cepa = document.getElementById("cepa")
@@ -36,7 +35,6 @@ import Calculator from "./calculator.js";
     };
     
 
-
 	//
 	// Inits & Event Listeners
 	//
@@ -46,7 +44,7 @@ import Calculator from "./calculator.js";
 		valor_compra: valor_compra,
 		producto: producto,
 		delivery: delivery,
-		// flete: flete,
+		flete: flete,
 		tramite_aduanal: tramite_aduanal,
 		impuestos: impuestos,
 		cepa:cepa,

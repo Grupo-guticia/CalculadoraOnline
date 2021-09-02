@@ -86,14 +86,15 @@ class Calculator {
             
             const cepa = 5.16;
             const dai = 15;
-            const impuesto_sobre_venta = 0.13
+            const impuesto_sobre_venta = 0.13;
+            let tramite_aduanal = this.get_tramite_aduanal();
             
-            let flete = parseFloat(this.peso.value) * parseFloat(this.valor_compra.value);
+            let flete = parseFloat(this.peso.value) * this.get_flete();
             let cif = parseFloat(this.valor_compra.value) + flete;
             let iva = (cif + dai) * impuesto_sobre_venta;
 			let impuesto = iva+dai;
-			let cargos_por_importacion = impuesto ;
-            let total = impuesto + cargos_por_importacion  + parseFloat(this.valor_compra.value) ;			
+			let cargos_por_importacion = flete + tramite_aduanal + impuesto +cepa ;
+            let total = flete + tramite_aduanal + impuesto  + parseFloat(this.valor_compra.value) ;			
 			
             this.impuestos.innerHTML = `$${impuesto.toFixed(2)}`;
 			this.cepa.innerHTML = `$${cepa.toFixed(2)}`;
