@@ -85,13 +85,16 @@ class Calculator {
 		if (this.validate_form()){
             
             const cepa = 5.16;
-            const dai = 15;
+             //condicion de que si es persona natural no deberia ser 0
             const impuesto_sobre_venta = 0.13;
             let tramite_aduanal = this.get_tramite_aduanal();
-            
+            let prima_seguro = parseFloat(this.valor_compra.value) * 0.015;
             let flete = parseFloat(this.peso.value) * this.get_flete();
-            let cif = parseFloat(this.valor_compra.value) + flete;
+            let cif = (parseFloat(this.valor_compra.value) + flete) + prima_seguro ;
+            const dai = cif * 0.13;
+
             let iva = (cif + dai) * impuesto_sobre_venta;
+            // 
 			let impuesto = iva+dai;
 			let cargos_por_importacion = flete + tramite_aduanal + impuesto + cepa ;
             let total = cargos_por_importacion  + parseFloat(this.valor_compra.value) ;			
