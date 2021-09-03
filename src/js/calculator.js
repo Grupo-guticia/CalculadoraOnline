@@ -14,19 +14,19 @@ class Calculator {
 
     get_tramite_aduanal(){
 		let tramite_aduanal = 0;
-		if (parseFloat(this.peso.value) >= 0.1 && parseFloat(this.peso.value) <= 99 ){
+		if (parseFloat(this.valor_compra.value) >= 0.1 && parseFloat(this.valor_compra.value) <= 99 ){
 			tramite_aduanal = 5
 		}
-		else if (parseFloat(this.peso.value) >= 100 && parseFloat(this.peso.value) < 300 ){
+		else if (parseFloat(this.valor_compra.value) >= 100 && parseFloat(this.valor_compra.value) < 300 ){
 			tramite_aduanal = 10;
 		}
-		else if (parseFloat(this.peso.value) >= 301 && parseFloat(this.peso.value) < 500 ){
+		else if (parseFloat(this.valor_compra.value) >= 301 && parseFloat(this.valor_compra.value) < 500 ){
 			tramite_aduanal = 15;
 		}
-		else if (parseFloat(this.peso.value) >= 501 && parseFloat(this.peso.value) < 1000 ){
+		else if (parseFloat(this.valor_compra.value) >= 501 && parseFloat(this.valor_compra.value) < 1000 ){
 			tramite_aduanal = 35;
 		}
-		else if (parseFloat(this.peso.value) >= 1001 && parseFloat(this.peso.value) < 3000 ){
+		else if (parseFloat(this.valor_compra.value) >= 1001 && parseFloat(this.valor_compra.value) < 3000 ){
 			tramite_aduanal = 65;
 		}
 
