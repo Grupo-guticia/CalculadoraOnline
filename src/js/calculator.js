@@ -17,16 +17,16 @@ class Calculator {
 		if (parseFloat(this.valor_compra.value) >= 0.1 && parseFloat(this.valor_compra.value) <= 99 ){
 			tramite_aduanal = 5
 		}
-		else if (parseFloat(this.valor_compra.value) >= 100 && parseFloat(this.valor_compra.value) < 300 ){
+		else if (parseFloat(this.valor_compra.value) >= 100 && parseFloat(this.valor_compra.value) <= 300 ){
 			tramite_aduanal = 10;
 		}
-		else if (parseFloat(this.valor_compra.value) >= 301 && parseFloat(this.valor_compra.value) < 500 ){
+		else if (parseFloat(this.valor_compra.value) >= 301 && parseFloat(this.valor_compra.value) <= 500 ){
 			tramite_aduanal = 15;
 		}
-		else if (parseFloat(this.valor_compra.value) >= 501 && parseFloat(this.valor_compra.value) < 1000 ){
+		else if (parseFloat(this.valor_compra.value) >= 501 && parseFloat(this.valor_compra.value) <= 1000 ){
 			tramite_aduanal = 35;
 		}
-		else if (parseFloat(this.valor_compra.value) >= 1001 && parseFloat(this.valor_compra.value) < 3000 ){
+		else if (parseFloat(this.valor_compra.value) >= 1001 && parseFloat(this.valor_compra.value) <= 3000 ){
 			tramite_aduanal = 65;
 		}
 
@@ -91,7 +91,7 @@ class Calculator {
             let prima_seguro = parseFloat(this.valor_compra.value) * 0.015;
             let flete = parseFloat(this.peso.value) * this.get_flete();
             let cif = (parseFloat(this.valor_compra.value) + flete) + prima_seguro ;
-            const dai = cif * 0.13;
+            const dai = cif * 0.15;
 
             let iva = (cif + dai) * impuesto_sobre_venta;
             // 
