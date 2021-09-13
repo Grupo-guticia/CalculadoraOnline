@@ -9,7 +9,7 @@ class Calculator {
 		this.flete = flete,
 		// this.tramite_aduanal = tramite_aduanal,
 		// this.cepa = cepa,
-		this.impuestos = impuestos,
+		// this.impuestos = impuestos,
 		this.manejo = manejo,
 		this.total_cargos_importacion = total_cargos_importacion,
 		// this.comision_por_compra = comision_por_compra,
@@ -83,7 +83,7 @@ class Calculator {
 		this.flete.innerHTML = "$0",
 		this.manejo.innerHTML = "$0",
 		// this.tramite_aduanal.innerHTML = "$0",
-		this.impuestos.innerHTML = "$0",
+		// this.impuestos.innerHTML = "$0",
 		// this.cepa.innerHTML = "$0",
 		this.total_cargos_importacion.innerHTML = "$0",
 		// this.comision_por_compra.innerHTML = "$0",
@@ -110,7 +110,7 @@ class Calculator {
         
         let {flete,manejo} = this.get_flete_and_manejo()
         
-		if (this.peso.value == "" ||this.valor_compra.value == "" || this.producto.value == "" || flete == "" || this.impuestos.value == "" || this.total_cargos_importacion.value == "" || this.manejo == ""){
+		if (this.peso.value == "" ||this.valor_compra.value == "" || this.producto.value == "" || flete == "" || /*this.impuestos.value == ""*/  this.total_cargos_importacion.value == "" || this.manejo == ""){
 			return false;
 		}else{
 			return true;
@@ -124,18 +124,18 @@ class Calculator {
 			let {flete,manejo} = this.get_flete_and_manejo();
 			let delivery = this.get_delivery();
 
-			let impuesto = parseFloat(this.producto.value) * parseFloat(this.valor_compra.value);
-			let cargos_por_importacion = flete + impuesto + manejo;
+			// let impuesto = parseFloat(this.producto.value) * parseFloat(this.valor_compra.value);
+			let cargos_por_importacion = flete + /*impuesto*/  manejo;
 
             if (delivery == "") delivery = 0;                
                 
-            let total = impuesto + cargos_por_importacion + parseFloat(delivery) + parseFloat(this.valor_compra.value) ;
+            let total = /*impuesto*/  cargos_por_importacion + parseFloat(delivery) + parseFloat(this.valor_compra.value) ;
 
 
 
 			
             this.flete.innerHTML = `$${flete.toFixed(2)}`;
-			this.impuestos.innerHTML = `$${impuesto.toFixed(2)}`;
+			// this.impuestos.innerHTML = `$${impuesto.toFixed(2)}`;
 			this.manejo.innerHTML = `$${manejo.toFixed(2)}`;
 			this.total_cargos_importacion.innerHTML = `$${cargos_por_importacion.toFixed(2)}`;
 			this.total.innerHTML = `$${total.toFixed(2)}`;
