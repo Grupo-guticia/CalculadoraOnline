@@ -11,6 +11,7 @@ class Calculator {
 		this.impuestos = impuestos,
 		this.total_cargos_importacion = total_cargos_importacion,
 		this.show_delivery = config.show_delivery,
+		this.recargo_por_sobrepeso = config.recargo_por_sobrepeso,
 		this.total = total
         
 	}
@@ -128,7 +129,7 @@ class Calculator {
 		return recargo_por_sobrepeso;
 	}
 
-    show_results(impuesto,cepa,tramite_aduanal,cargos_por_importacion,total,flete,delivery){
+    show_results(impuesto,cepa,tramite_aduanal,cargos_por_importacion,total,flete,delivery,recargo_por_sobrepeso){
         
         this.impuestos.innerHTML = `$${impuesto}`;
         this.cepa.innerHTML = `$${cepa}`;
@@ -137,6 +138,7 @@ class Calculator {
         this.total.innerHTML = `$${total}`;
         this.flete.innerHTML = `$${flete}`;
         this.show_delivery.innerHTML = `$${delivery}`;
+        this.recargo_por_sobrepeso.innerHTML = `$${recargo_por_sobrepeso}`;
 
         Toastify({
             text: "¡Cálculo realizado!",
@@ -197,7 +199,7 @@ class Calculator {
             let total = cargos_por_importacion  + parseFloat(this.valor_compra.value) ;			
 			
 
-            this.show_results(impuesto.toFixed(2),cepa.toFixed(2),tramite_aduanal.toFixed(2),cargos_por_importacion.toFixed(2),total.toFixed(2),flete.toFixed(2),delivery);
+            this.show_results(impuesto.toFixed(2),cepa.toFixed(2),tramite_aduanal.toFixed(2),cargos_por_importacion.toFixed(2),total.toFixed(2),flete.toFixed(2),delivery,recargo_por_sobrepeso.toFixed(2));
             
 		}else{
             this.show_errors()

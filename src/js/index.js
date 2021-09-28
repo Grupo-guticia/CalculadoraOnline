@@ -52,6 +52,7 @@ import Calculator from "./calculator.js";
 		total_cargos_importacion:total_cargos_importacion,
 		// comision_por_compra:comision_por_compra,
         show_delivery:show_delivery,
+        recargo_por_sobrepeso:recargo_por_sobrepeso,
 		total:total
 
 	});
