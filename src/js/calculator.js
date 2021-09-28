@@ -173,7 +173,7 @@ class Calculator {
             let delivery = this.get_delivery();
             let recargo_por_sobrepeso=this.get_recargo_por_sobrepeso()
 
-            console.log('Delivery',delivery)
+            console.log('RECARGO',recargo_por_sobrepeso)
 
             if (delivery == "") delivery = 0; 
 
@@ -191,6 +191,8 @@ class Calculator {
             
 			let impuesto = iva+dai;
             let costo_por_seguro_adicional=this.get_seguro_adicional();
+
+            console.log('RECARGOS POR SOBREPESO',recargo_por_sobrepeso)
 			let cargos_por_importacion = flete + tramite_aduanal + impuesto + cepa + costo_por_seguro_adicional + delivery + recargo_por_sobrepeso;
             let total = cargos_por_importacion  + parseFloat(this.valor_compra.value) ;			
 			
