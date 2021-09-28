@@ -9,6 +9,7 @@ import Calculator from "./calculator.js";
 	const valor_compra = document.getElementById("valor_compra");
 	const producto = document.getElementById("producto");
 	const delivery = document.getElementsByName("radioDelivery");
+	const show_delivery = document.getElementById("delivery");
 
 	const flete = document.getElementById("flete");
     const impuestos = document.getElementById("impuestos")
@@ -50,6 +51,7 @@ import Calculator from "./calculator.js";
 		cepa:cepa,
 		total_cargos_importacion:total_cargos_importacion,
 		// comision_por_compra:comision_por_compra,
+        show_delivery:show_delivery,
 		total:total
 
 	});
